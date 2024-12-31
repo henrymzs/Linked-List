@@ -8,7 +8,7 @@ int main() {
     Contato novoContato; 
 
     while (1) {
-        printf("Menu:\n");
+        printf("--- MENU ---:\n");
         printf("1. Adicionar Contato\n");
         printf("2. Remover Contato\n");
         printf("3. Buscar Contato\n");
