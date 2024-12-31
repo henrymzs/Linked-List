@@ -1,10 +1,12 @@
 #include "Contato.h"
 #include <stdio.h>
 
+
+
 void adicionarContato(Contato **lista, Contato novoContato) {
     Contato *novo = malloc(sizeof(Contato)); // aloca memoria para o novo contato
     if (novo == NULL) {
-        printf("Erro ao alocar memória para novo contato.\n"); 
+        printf("Erro ao alocar memória para novo contato.\n");
         return;
     }
     strcpy(novo->nome, novoContato.nome); 
@@ -18,7 +20,6 @@ void adicionarContato(Contato **lista, Contato novoContato) {
         *lista = novo;
     } else {
         Contato *atual = *lista; 
-        
         while (atual->proximo != NULL) { 
             atual = atual->proximo;
         }
@@ -30,7 +31,7 @@ void adicionarContato(Contato **lista, Contato novoContato) {
 void removerContato(Contato **lista, int id) {
     Contato *atual = *lista; 
     Contato *anterior = NULL; 
-
+    
     while (atual != NULL) {
         if (atual->id == id) { 
             if (anterior == NULL) { 
@@ -62,7 +63,6 @@ void listarContatos(Contato *lista) {
         printf("Telefone: %s\n", atual->telefone); 
         printf("Email: %s\n", atual->email);     
         encontrou = 1; 
-        
         atual = atual->proximo; 
     }
     
@@ -71,15 +71,14 @@ void listarContatos(Contato *lista) {
     }
 }
 
-
 Contato* buscarContato(Contato *lista, int id) {
     Contato *atual = lista; 
     
     while (atual != NULL) {
         if (atual->id == id) { 
-            return atual; 
+            return atual;
         }
-        atual = atual->proximo;  
+        atual = atual->proximo; 
     }
     
     return NULL; 
