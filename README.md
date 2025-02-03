@@ -41,7 +41,7 @@ Escolha uma opção:
 2. **Clonar o repositório**:
    Clone este repositório para a sua máquina local:
    ```bash
-   git clone https://github.com/henrymzs/listaLigada.git
+   https://github.com/henrymzs/Linked-List.git
 3. **Compilar o código: Após clonar o repositório ou baixar os arquivos, compile o código com o seguinte comando:**:
    ```bash
    gcc src/Main.c src/Contato.c -o programa
